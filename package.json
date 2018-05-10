@@ -1,0 +1,19 @@
+{
+  "name": "binding",
+  "version": "0.1.0",
+  "description": "Automatic binding strategies to alleviate JavaScript this-pain",
+  "main": "binding.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/padresmurfa/binding.git"
+  },
+  "author": "David Brandt <padresmurfa@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/padresmurfa/binding/issues"
+  },
+  "homepage": "https://github.com/padresmurfa/binding#readme"
+}
