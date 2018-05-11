@@ -1,5 +1,5 @@
 {
-  "name": "binding",
+  "name": "@padresmurfa/binding",
   "version": "0.1.0",
   "description": "Automatic binding strategies to alleviate JavaScript this-pain",
   "main": "binding.js",
