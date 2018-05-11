@@ -2,9 +2,13 @@
   "name": "@padresmurfa/binding",
   "version": "0.1.0",
   "description": "Automatic binding strategies to alleviate JavaScript this-pain",
-  "main": "binding.js",
+  "main": "dist/binding.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rm -rf dist && mkdir dist",
+    "build": "npx babel src --out-file dist/binding.js",
+    "minify": "npx minify --js < dist/binding.js > dist/binding.min.js",
+    "rebuild": "npm run-script clean && npm run-script build && npm run-script minify"
   },
   "repository": {
     "type": "git",
@@ -15,5 +19,14 @@
   "bugs": {
     "url": "https://github.com/padresmurfa/binding/issues"
   },
-  "homepage": "https://github.com/padresmurfa/binding#readme"
+  "homepage": "https://github.com/padresmurfa/binding#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.3",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^22.4.3",
+    "minify": "^3.0.5"
+  }
 }
