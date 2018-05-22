@@ -67,7 +67,7 @@ function prebind(targetClass, ...args)
     });
 
     return target;
-};
+}
 
 function jitbind(targetClass, ...args)
 {
@@ -109,7 +109,7 @@ class Factory
 
     JIT(targetClass, ...args)
     {
-        return prebind(targetClass, ...args);
+        return jitbind(targetClass, ...args);
     }
 }
 

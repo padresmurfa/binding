@@ -75,7 +75,7 @@ function _prebind(targetClass) {
     });
 
     return target;
-};
+}
 
 function jitbind(targetClass) {
     for (var _len2 = arguments.length, args = Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -131,7 +131,7 @@ var Factory = function () {
                 args[_key4 - 1] = arguments[_key4];
             }
 
-            return _prebind.apply(undefined, [targetClass].concat(args));
+            return jitbind.apply(undefined, [targetClass].concat(args));
         }
     }]);
 
