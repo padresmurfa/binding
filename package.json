@@ -1,6 +1,6 @@
 {
   "name": "@padresmurfa/binding",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Automatic binding strategies to alleviate JavaScript this-pain",
   "main": "dist/binding.min.js",
   "scripts": {
