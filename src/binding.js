@@ -2,6 +2,13 @@ import _ from 'lodash';
 
 const propertyNamesRegistry = new WeakMap();
 
+function renameFunction(newName, func)
+{
+    Object.defineProperty(func, "name", { value: newName });
+
+    return func;
+}
+
 function isConstructor(funcName)
 {
     return funcName === "constructor";
@@ -95,7 +102,7 @@ function jitbind(targetClass, ...args)
         Object.defineProperties(this, props);        
     };
 
-    jitClass.name = "$jit-" + targetClass.name;
+    renameFunction("$jit-" + targetClass.name, jitClass);
 
     return new jitClass(target);
 }
